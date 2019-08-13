@@ -18,7 +18,7 @@ class Character {
         readFromFile();
     }
 
-    Character(String n, int a, int d, int p) {
+    private Character(String n, int a, int d, int p) {
         nome = n;
         attacco = a;
         difesa = d;

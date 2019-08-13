@@ -26,11 +26,6 @@ public class Main {
                 session.addPlayer(tempName, tempNumber);
             }
         }
-        session.addPlayer("alfa", 0);
-        session.addPlayer("beta", 1);
-        session.addPlayer("gamma", 7);
-        session.addPlayer("teta", 13);
         session.start();
-        System.out.println("");
     }
 }
