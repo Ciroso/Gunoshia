@@ -15,7 +15,24 @@ class Character {
     Character[] pool;
 
     Character() {
-        readFromFile();
+        //readFromFile();
+        pool = new Character[14];
+        pool[0] = new Character("Arman", 35, 40, 18);
+        pool[1] = new Character("SalvoF", 18, 24, 16);
+        pool[2] = new Character("SalvoL", 0, 30, 25);
+        pool[3] = new Character("Giano", 50, 12, 0);
+        pool[4] = new Character("Magazzu", 31, 20, 11);
+        pool[5] = new Character("Laura", 32, 20, 8);
+        pool[6] = new Character("Anna", 20, 25, 15);
+        pool[7] = new Character("Borzi", 18, 38, 3);
+        pool[8] = new Character("Ivana", 28, 18, 18);
+        pool[9] = new Character("SimoneL", 35, 13, 12);
+        pool[10] = new Character("Sofia", 20, 38, 14);
+        pool[11] = new Character("Simone", 2, 31, 1);
+        pool[12] = new Character("Luca", 12, 2, 4);
+        pool[13] = new Character("Francesca", 27, 36, 0);
+        for (int i = 0; i < 14; i++)
+            System.out.println(i + " - " + pool[i].getNome());
     }
 
     private Character(String n, int a, int d, int p) {
@@ -79,11 +96,8 @@ class Character {
                             fileName + "'");
         } catch (IOException ex) {
             System.out.println("Error reading file '" + fileName + "'");
-            // Or we could just do this:
-            // ex.printStackTrace();
         }
     }
-    //SKill
 
 
 }

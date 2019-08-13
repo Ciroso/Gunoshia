@@ -97,11 +97,3 @@ class Session extends Thread {
                 System.out.println(character.getNomeVero());
     }
 }
-
-
-///for (int i = 0; i < pool.length; i++){
-//            for(int j = 0; j < pool.length && i != j; j++){
-//                if((pool[i].getAttacco() - pool[j].getDifesa()) >= random.nextInt(100))
-//                    System.out.println(pool[i].getNomeVero() +  " potrebbe capire qualcosa su " + pool[j].getNomeVero());
-//            }
-//        }
