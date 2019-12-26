@@ -7,6 +7,7 @@ public class Main {
         Session session = new Session();
         boolean adding = true;
         Scanner scanner = new Scanner(System.in);
+        int t = session.getPartecipanti();
         System.out.println("\n\nBenvenuto nella selezione personaggi!");
         while (adding) {
             System.out.println("Immetti il nome del prossimo partecipante oppure scrivi   start   per cominciare la partita");
@@ -19,9 +20,9 @@ public class Main {
                     System.out.println("Immetti il numero corrisppondente al personaggio");
                     tempNumber = scanner.nextInt();
                     scanner.nextLine();
-                    if (tempNumber > 14 || tempNumber < 0)
+                    if (tempNumber > (t + 1) || tempNumber < 0)
                         System.out.println("Selezione non valida, riprova!");
-                } while (tempNumber > 14 || tempNumber < 0);
+                } while (tempNumber > (t + 1) || tempNumber < 0);
                 session.addPlayer(tempName, tempNumber);
             }
         }

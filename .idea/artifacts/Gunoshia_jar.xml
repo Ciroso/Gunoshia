@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Gunoshia_jar</output-path>
     <root id="archive" name="Gunoshia.jar">
       <element id="module-output" name="Gunoshia" />
-      <element id="file-copy" path="$PROJECT_DIR$/character.txt" />
     </root>
   </artifact>
 </component>

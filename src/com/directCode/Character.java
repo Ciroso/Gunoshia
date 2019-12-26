@@ -11,11 +11,13 @@ class Character {
     private int attacco;
     private int difesa;
     private int prob;
+    private int t;
 
     Character[] pool;
 
     Character() {
-        //readFromFile();
+        readFromFile();
+/*
         pool = new Character[14];
         pool[0] = new Character("Arman", 35, 40, 18);
         pool[1] = new Character("SalvoF", 18, 24, 16);
@@ -31,8 +33,10 @@ class Character {
         pool[11] = new Character("Simone", 2, 31, 1);
         pool[12] = new Character("Luca", 12, 2, 4);
         pool[13] = new Character("Francesca", 27, 36, 0);
-        for (int i = 0; i < 14; i++)
+        for (int i = 0; i < pool.length; i++)
             System.out.println(i + " - " + pool[i].getNome());
+
+ */
     }
 
     private Character(String n, int a, int d, int p) {
@@ -69,7 +73,7 @@ class Character {
     private void readFromFile() {
         String fileName = "character.txt";
         String line;
-        int t = 0;
+        t = 0;
         try {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -99,5 +103,8 @@ class Character {
         }
     }
 
+    int getNumPartecipanti() {
+        return t;
+    }
 
 }

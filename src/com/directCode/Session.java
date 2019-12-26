@@ -6,9 +6,10 @@ import java.util.Scanner;
 class Session extends Thread {
     private int day;
     private Character[] pool;
+    private Character c;
 
     Session() {
-        Character c = new Character();
+        c = new Character();
         day = 1;
         this.pool = c.pool;
     }
@@ -18,17 +19,18 @@ class Session extends Thread {
         boolean alive = true;
         while (alive) {
             System.out.println("~Console Comandi~ \n 1: chi è ancora vivo \n 2: Incomincia il nuovo giorno + calcola flat \n 3: Qualcuno ha capito qualcosa? \n 4: Uccidi/congela qualcuno \n 0: Termina sessione\nComandi Signore!");
-            int temp = scanner.nextInt();
+            int scelta = scanner.nextInt();
             System.out.println("\n\n\n################################################################################");
-            if (temp == 0)
+            if (scelta == 0)
                 alive = false;
-            if (temp == 1)
+            if (scelta == 1)
                 whoIsAlive();
-            if (temp == 2)
+            if (scelta == 2)
                 newDay();
-            if (temp == 3)
+            if (scelta == 3)
                 scopri();
-            if (temp == 4) {
+            if (scelta == 4) {
+                whoIsAlive();
                 System.out.println("Chi? (nome vero)");
                 scanner.nextLine();
                 String t = scanner.nextLine();
@@ -49,7 +51,7 @@ class Session extends Thread {
 
     private void removePlayer(String personavera) {
         int i = 0;
-        while (!personavera.equals(pool[i].getNomeVero()) && i < 13) {
+        while (!personavera.equals(pool[i].getNomeVero()) && i < getPartecipanti()) {
             i++;
         }
         if (!pool[i].getNomeVero().equals(personavera))
@@ -95,5 +97,9 @@ class Session extends Thread {
         for (Character character : pool)
             if (!character.getNomeVero().equals("NA"))
                 System.out.println(character.getNomeVero());
+    }
+
+    public int getPartecipanti() {
+        return c.getNumPartecipanti();
     }
 }
